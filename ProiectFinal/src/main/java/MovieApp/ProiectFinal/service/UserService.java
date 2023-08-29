@@ -5,10 +5,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import MovieApp.ProiectFinal.model.User;
 import MovieApp.ProiectFinal.repository.UserRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Controller
+@Service
 @RequiredArgsConstructor
 
 public class UserService {
@@ -24,15 +25,18 @@ public class UserService {
             throw new RuntimeException("Invalid data, please try again");
         }
     }
+
     public List<User> findAll() {
         return userRepository.findAll();
     }
+
     public User findById(int id) {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Guest not found"));
     }
-    public void deleteGuestById(int id) {
+
+    public void deleteUserById(int id) {
         User user = userRepository.findById(id)
-                .orElseThrow(() ->  new RuntimeException("User not found"));
+                .orElseThrow(() -> new RuntimeException("User not found"));
         userRepository.deleteById(id);
     }
 
