@@ -2,6 +2,7 @@ package MovieApp.ProiectFinal.controller;
 
 
 import MovieApp.ProiectFinal.model.User;
+import MovieApp.ProiectFinal.service.UserRegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -20,26 +21,38 @@ import java.util.List;
 @Controller
 public class UserController {
     private final UserService userService;
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private final UserRegistrationService userRegistrationService;
 
     @GetMapping("/users")
     public String showAllUsers(Model model) {
         List<User> users = userService.findAll();
-        logger.info("Number of users retrieved: {}", users.size()); // Log the number of users retrieved
         model.addAttribute("users", users);
         return "userList.html";
     }
 
-    @PostMapping("/usersAdd")
-    @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody
-    public String createUsers(@RequestBody User user) {
-        return userService.createUser(user);
-    }
+//    @PostMapping("/usersAdd")
+//    @ResponseStatus(HttpStatus.CREATED)
+//    @ResponseBody
+//    public String createUsers(@RequestBody User user) {
+//        return userService.createUser(user);
+//    }
 
     @DeleteMapping("/users/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteGuestById(@PathVariable("id") int id) {
         userService.deleteUserById(id);
+    }
+    @GetMapping("/user/register")
+    public String showRegistrationForm(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
+        return "userRegisterForm.html";
+    }
+
+    @PostMapping("/user/register")
+    public String handleRegistrationForm(@ModelAttribute("userRegistration") User user) {
+        userRegistrationService.registerUser(user);
+
+        return "registration-success";
     }
 }

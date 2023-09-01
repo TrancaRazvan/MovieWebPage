@@ -15,16 +15,16 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
-    public String createUser(User user) {
-        validateUser(user);
-        return "Create guest with id: " + userRepository.save(user).getId();
-    }
-
-    private void validateUser(User user) {
-        if (user == null || user.getUsername().isEmpty() || user.getMail().isEmpty() || user.getPassword().isEmpty()) {
-            throw new RuntimeException("Invalid data, please try again");
-        }
-    }
+//    public String createUser(User user) {
+//        validateUser(user);
+//        return "Create guest with id: " + userRepository.save(user).getId();
+//    }
+//
+//    private void validateUser(User user) {
+//        if (user == null || user.getUsername().isEmpty() || user.getEmail().isEmpty() || user.getPassword().isEmpty()) {
+//            throw new RuntimeException("Invalid data, please try again");
+//        }
+//    }
 
     public List<User> findAll() {
         return userRepository.findAll();
