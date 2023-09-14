@@ -1,0 +1,18 @@
+@keyframes beatAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#movieIcon:hover {
+    animation: beatAnimation 0.5s ease-in-out infinite;
+}
+.logo{
+float : left}
+
+.logo, .navigationBar {
+    margin-right: 20px;
+}

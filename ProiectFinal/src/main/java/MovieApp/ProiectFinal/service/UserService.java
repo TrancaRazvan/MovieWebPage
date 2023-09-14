@@ -1,6 +1,8 @@
 package MovieApp.ProiectFinal.service;
 
 
+import MovieApp.ProiectFinal.exception.RegistrationException;
+import MovieApp.ProiectFinal.registration.RegistrationValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import MovieApp.ProiectFinal.model.User;
@@ -15,16 +17,22 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
-//    public String createUser(User user) {
-//        validateUser(user);
-//        return "Create guest with id: " + userRepository.save(user).getId();
-//    }
-//
-//    private void validateUser(User user) {
-//        if (user == null || user.getUsername().isEmpty() || user.getEmail().isEmpty() || user.getPassword().isEmpty()) {
-//            throw new RuntimeException("Invalid data, please try again");
-//        }
-//    }
+    public void registerUser(User user) throws RegistrationException {
+
+        if (!RegistrationValidator.isUsernameValid(user.getUsername())) {
+            throw new RegistrationException("Invalid username.");
+        }
+        if (!RegistrationValidator.isEmailValid(user.getEmail())) {
+            throw new RegistrationException("Invalid email.");
+        }
+        if (!RegistrationValidator.isPasswordValid(user.getPassword())) {
+            throw new RegistrationException("Invalid password.");
+        }
+        if (!RegistrationValidator.isDateOfBirthValid(String.valueOf(user.getDateOfBirth()))) {
+            throw new RegistrationException("Invalid date of birth.");
+        }
+        userRepository.save(user);
+    }
 
     public List<User> findAll() {
         return userRepository.findAll();

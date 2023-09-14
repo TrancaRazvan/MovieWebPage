@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="29.08.2023 commit">
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/exception/RegistrationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/registration/RegistrationValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserRegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/userRegisterForm.html" afterDir="false" />
+    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="added register">
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/exception/RegistrationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/exception/RegistrationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/registration/RegistrationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/registration/RegistrationValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserRegistrationService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/registration-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/registration-success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/userRegisterForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/userRegisterForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/razva/OneDrive/Desktop/MovieWebPage",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/razva/OneDrive/Desktop/MovieWebPage&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\templates\Images" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\java\MovieApp\ProiectFinal" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\.mvn" />
@@ -124,14 +130,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693328820564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added register">
+      <option name="closed" value="true" />
+      <created>1693586072556</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693586072556</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="29.08.2023 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="29.08.2023 commit" />
+    <MESSAGE value="added register" />
+    <option name="LAST_COMMIT_MESSAGE" value="added register" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

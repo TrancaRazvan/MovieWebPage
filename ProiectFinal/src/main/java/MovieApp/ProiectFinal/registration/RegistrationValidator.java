@@ -24,10 +24,6 @@ public class RegistrationValidator {
         return password.length() >= 8;
     }
 
-    public static boolean isNameValid(String name) {
-        int nameLength = name.length();
-        return nameLength >= 2 && nameLength <= 50;
-    }
 
     public static boolean isDateOfBirthValid(String dateOfBirth) {
         try {
