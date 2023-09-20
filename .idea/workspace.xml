@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="index customization pt1">
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/PeakyBlinders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheGodfather.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheShawshankRedemption.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movieAddingForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movieBox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="html customization pt2">
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/BreakingBad.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Series.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/SeriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/SeriesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +61,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\static\images" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\static\" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\static" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\templates" />
-      <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\static\images" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\static\images\images1" />
     </key>
   </component>
@@ -147,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694712525114</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="html customization pt2">
+      <option name="closed" value="true" />
+      <created>1695209301732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695209301732</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,7 +159,8 @@
     <MESSAGE value="29.08.2023 commit" />
     <MESSAGE value="added register" />
     <MESSAGE value="index customization pt1" />
-    <option name="LAST_COMMIT_MESSAGE" value="index customization pt1" />
+    <MESSAGE value="html customization pt2" />
+    <option name="LAST_COMMIT_MESSAGE" value="html customization pt2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -20,4 +20,5 @@ public class MovieController {
         model.addAttribute("movies", movies);
         return "movieBox.html";
     }
+
 }

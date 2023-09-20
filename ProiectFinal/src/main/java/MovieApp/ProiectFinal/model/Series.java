@@ -17,6 +17,6 @@ public class Series {
     private String title;
     private String description;
     private int releaseYear;
-
     private double rating;
+    private String imageurl;
 }

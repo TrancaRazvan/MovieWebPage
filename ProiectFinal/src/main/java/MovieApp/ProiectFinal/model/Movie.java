@@ -18,7 +18,6 @@ public class Movie {
     private String title;
     private String description;
     private int releaseYear;
-
     private double rating;
     private String imageurl;
 
