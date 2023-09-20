@@ -16,10 +16,6 @@ import java.util.List;
 public class MovieService {
     private final MovieRepository movieRepository;
 
-    public String createUser(Movie movie) {
-        return "Create movie with id: " + movieRepository.save(movie).getId();
-    }
-
     public List<Movie> findAll() {
         return movieRepository.findAll();
     }

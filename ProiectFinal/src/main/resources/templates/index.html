@@ -1,26 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href=" style.css">
     <title>asd</title>
+    <style>
+        .main-header {
+    background-color: rgba(15,15,15,.99);
+    height: 80px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.logo {
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 24px;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.navigationBar {
+
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 35px;
+     position: relative;
+}
+
+li:first-child {
+    margin-left: 20px;
+}
+li:last-child {
+    margin-left: 65px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search{
+margin-right: 100px
+}
+
+.login-register a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #333;
+    border-radius: 5px;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+    </style>
 </head>
 <body>
 <header class="main-header">
-    <a href="/" class="logo">
+
+    <div class="menu">
+        <a href="/" class="logo">
         <span class="logo-mini">
            <i class="fa-solid fa-film fa-lg" style="color: #ff0000;" id="movieIcon">
                MovieApp
            </i>
         </span>
-    </a>
-    <nav class="navigationBar">
-        <a href="" class="sidebar-toggle" role="button">
-            <span class="slideBars">
-              <i class="fa-solid fa-bars fa-lg"></i>
-                </span>
         </a>
-    </nav>
+        <ul>
+            <li>
+                <a title="Home" href="/" aria-current="page">Home</a>
+            </li>
+
+            <li>
+                <a title="Series" href="/seriale">Series</a>
+            </li>
+
+            <li>
+                <a title="Movies" href="/filme">Movies</a>
+            </li>
+            <li>
+                <form action="#">
+                    <input type="text"
+                           placeholder="Search"
+                           name="search"
+                           style="width: 700px;">
+                </form>
+            </li>
+            <li class="login-register">
+                <div>
+                    <a title="LogIn" href="/login">Log In</a>
+                    <a title="Register" href="/register">Register</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
 </header>
+
+
 </body>
 <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
 

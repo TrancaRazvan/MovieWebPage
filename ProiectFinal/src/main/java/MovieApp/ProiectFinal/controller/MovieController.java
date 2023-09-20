@@ -18,6 +18,6 @@ public class MovieController {
     public String showAllMovies(Model model) {
         List<Movie> movies = movieService.findAll();
         model.addAttribute("movies", movies);
-        return "movies";
+        return "movieBox.html";
     }
 }

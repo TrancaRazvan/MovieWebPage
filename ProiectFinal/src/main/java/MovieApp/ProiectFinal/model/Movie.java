@@ -20,5 +20,6 @@ public class Movie {
     private int releaseYear;
 
     private double rating;
+    private String imageurl;
 
 }

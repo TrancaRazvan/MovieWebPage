@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+     .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: 2px;
+}
+      .movie-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    height: 333px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+     background-color: #C5C5C5;
+     transition: transform 0.2s;
+}
+.movie-box:hover {
+        transform: scale(1.05); /* Scale the box slightly on hover */
+    }
+        .movie-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .movie-description {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .movie-images{
+            width: 100%;
+            height: 300px;
+        }
+        .movie-title{
+        font-size: 15px;
+        color: #f5f5f5
+
+
+        }
+    </style>
+
+    <title>Movie Box</title>
+</head>
+<body>
+<div class="movie-container">
+    <div th:each="movie : ${movies}">
+        <div class="movie-box">
+        <img class="movie-images" th:src="@{'/images/' + ${movie.imageurl}}" alt="Movie Photo">
+            <h2 class= "movie-title" th:text="${movie.title}">Movie Title</h2>
+    </div>
+</div>
+</div>
+</body>
+</html>
