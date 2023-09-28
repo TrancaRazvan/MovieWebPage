@@ -1,16 +1,17 @@
 package MovieApp.ProiectFinal.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Data
 @Table(name = "users")
-@RequiredArgsConstructor
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

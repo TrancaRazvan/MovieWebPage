@@ -20,9 +20,12 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public void deleteMovieById(int id) {
+    public void deleteMovieById(Long id) {
         Movie movie = movieRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         movieRepository.deleteById(id);
     }
 
+    public Movie saveMovie(Movie movie) {
+        return movieRepository.save(movie);
+    }
 }

@@ -38,11 +38,11 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User findById(int id) {
+    public User findById(Long id) {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Guest not found"));
     }
 
-    public void deleteUserById(int id) {
+    public void deleteUserById(Long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));
         userRepository.deleteById(id);

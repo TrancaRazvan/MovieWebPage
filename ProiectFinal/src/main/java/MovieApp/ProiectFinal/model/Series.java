@@ -1,22 +1,40 @@
 package MovieApp.ProiectFinal.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 
 @Data
 @Entity
 @Table(name = "series")
-@RequiredArgsConstructor
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class Series {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "series_id")
     private Long id;
     private String title;
     private String description;
     private int releaseYear;
     private double rating;
     private String imageurl;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
+    @JoinTable(name = "series_genre",
+            joinColumns = @JoinColumn(name = "series_id"),
+            inverseJoinColumns =@JoinColumn(name = "genre_id"))
+    private Set<Genre> seriesGenres = new HashSet<>();
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, description, releaseYear, rating, imageurl);
+    }
 }
