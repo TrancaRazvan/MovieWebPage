@@ -17,6 +17,7 @@ import java.util.Set;
 @Setter
 @Getter
 public class Series {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "series_id")

@@ -1,10 +1,12 @@
 package MovieApp.ProiectFinal.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -27,11 +29,15 @@ public class Movie {
     private double rating;
     private String imageurl;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinTable(name = "movie_genre",
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns =@JoinColumn(name = "genre_id"))
     private Set<Genre> movieGenres = new HashSet<>();
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, description, releaseYear, rating, imageurl);
+    }
 
 }

@@ -1,5 +1,7 @@
 package MovieApp.ProiectFinal.controller;
 
+import MovieApp.ProiectFinal.dto.MovieWithGenresDTO;
+import MovieApp.ProiectFinal.dto.SeriesWithGenresDTO;
 import MovieApp.ProiectFinal.model.Movie;
 import MovieApp.ProiectFinal.model.Series;
 import MovieApp.ProiectFinal.service.MovieService;
@@ -27,10 +29,10 @@ public class IndexController {
     @GetMapping("/")
     public String showIndexPage(Model model) {
 
-        List<Movie> movies = movieService.findAll();
+        List<MovieWithGenresDTO> movies = movieService.findAll();
         model.addAttribute("movies", movies);
 
-        List<Series> serieses = seriesService.findAll();
+        List<SeriesWithGenresDTO> serieses = seriesService.findAll();
         model.addAttribute("serieses", serieses);
 
         return "index.html";
