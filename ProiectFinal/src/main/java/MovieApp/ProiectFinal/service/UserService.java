@@ -2,11 +2,16 @@ package MovieApp.ProiectFinal.service;
 
 
 import MovieApp.ProiectFinal.exception.RegistrationException;
-import MovieApp.ProiectFinal.registration.RegistrationValidator;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import MovieApp.ProiectFinal.model.User;
+import MovieApp.ProiectFinal.model.UserRoles;
+import MovieApp.ProiectFinal.registration.RegistrationValidator;
 import MovieApp.ProiectFinal.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,26 +19,21 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 
-public class UserService {
+public class UserService implements UserDetailsService {
+    @Autowired
     private final UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
-    public void registerUser(User user) throws RegistrationException {
-
-        if (!RegistrationValidator.isUsernameValid(user.getUsername())) {
-            throw new RegistrationException("Invalid username.");
+    public User registerUser(User user) {
+        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+            return null;
         }
-        if (!RegistrationValidator.isEmailValid(user.getEmail())) {
-            throw new RegistrationException("Invalid email.");
-        }
-        if (!RegistrationValidator.isPasswordValid(user.getPassword())) {
-            throw new RegistrationException("Invalid password.");
-        }
-        if (!RegistrationValidator.isDateOfBirthValid(String.valueOf(user.getDateOfBirth()))) {
-            throw new RegistrationException("Invalid date of birth.");
-        }
-        userRepository.save(user);
+        String encodedPass = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPass);
+        user.setRole(UserRoles.USER);
+        return userRepository.save(user);
     }
-
     public List<User> findAll() {
         return userRepository.findAll();
     }
@@ -48,4 +48,14 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+
+
+    public User authenticate(String username, String password) {
+        return userRepository.findByUsernameAndPassword(username,password).orElseThrow(() -> new UsernameNotFoundException("User was not found."));
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User was not found."));
+    }
 }

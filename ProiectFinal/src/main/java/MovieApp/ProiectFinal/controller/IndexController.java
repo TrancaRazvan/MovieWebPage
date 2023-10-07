@@ -37,12 +37,5 @@ public class IndexController {
 
         return "index.html";
     }
-    @GetMapping("/login")
-    public String showLoginForm(){
-        return "login.html";
-    }
-    @GetMapping("/register")
-    public String showRegisterForm(){
-        return "register.html";
-    }
+
 }
