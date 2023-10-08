@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Log In</title>
-    <link rel="stylesheet" href="/static/css/form.css">
+    <link rel="stylesheet" href="/static/css/form.css"  type="text/css">
 </head>
 
 <body class="align">
@@ -11,7 +11,7 @@
 <h1>Log in</h1>
 <div class="grid">
 
-    <form action="/login" method="post" class="form login">
+    <form th:action="@{/login}" th:object="${user}" method="POST" class="form login">
 
         <div class="form__field">
             <label for="login__username"><svg class="icon">

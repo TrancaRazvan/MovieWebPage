@@ -28,6 +28,12 @@ public class UserController {
     @Autowired
     private final PasswordEncoder passwordEncoder;
 
+    @DeleteMapping("/users/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteGuestById(@PathVariable("id") Long id) {
+        userService.deleteUserById(id);
+    }
+
     @GetMapping("/users")
     public String showAllUsers(Model model) {
         List<User> users = userService.findAll();
@@ -35,14 +41,9 @@ public class UserController {
         return ".html";
     }
 
-    @DeleteMapping("/users/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteGuestById(@PathVariable("id") Long id) {
-        userService.deleteUserById(id);
-    }
-
     @GetMapping("/login")
-    public String showLoginForm(){
+    public String showLoginForm(Model model){
+        model.addAttribute("user", new User());
         return "login.html";
     }
 
@@ -60,16 +61,13 @@ public class UserController {
     @PostMapping("/register")
     public String register(@ModelAttribute("user") User user){
         userService.registerUser(user);
-        if (user == null){
-            return "redirect:/fail";
-        }else{
-            return "redirect:/login";
-        }
+        return user == null ? "redirect:/fail" : "redirect:/login";
     }
 
-    @PostMapping("/login")
-    public String login(@ModelAttribute User userModel){
-        UserDetails authUser = userService.loadUserByUsername(userModel.getUsername());
-        return authUser == null ? "fail.html" : "redirect:/";
-    }
+//    @PostMapping("/login")
+//    public String login(@ModelAttribute("user") User user){
+//        boolean succes = userService.verifyUser(user);
+//        return succes == true ? "redirect://" : "redirect:/fail";
+//
+//    }
 }
