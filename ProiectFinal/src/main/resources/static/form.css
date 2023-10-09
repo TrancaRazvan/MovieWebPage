@@ -179,7 +179,8 @@ input[type="submit"] {
 }
 
 .login input[type="password"],
-.login input[type="text"] {
+.login input[type="text"],
+.login input[type="email"]{
   background-color: var(--loginInputBackgroundColor);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;

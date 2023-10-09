@@ -7,9 +7,7 @@
             align-items: center;
             color: #ffffff;
         }
-         body{
-          background-image: url('/static/images/background.jpg');
-          }
+
         .logo {
             text-decoration: none;
             color: #ff0000;
@@ -70,12 +68,14 @@
             color: #fff;
             padding: 5px 10px;
             margin-right: 5px;
+            margin-left: 5px;
             background-color: #dc143c;
             border-radius: 5px;
         }
         .login-register {
             display: flex;
             align-items: center;
+            margin-right: 5px;
 }
 
         body {

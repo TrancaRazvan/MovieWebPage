@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="register">
+    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="login">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/ProiectFinalApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/ProiectFinalApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/fail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +58,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\razva\OneDrive\Desktop\Proiect final\ProiectFinal\src\main\resources\templates" />
       <recent name="C:\Users\razva\OneDrive\Desktop\Proiect final\ProiectFinal\src\main\resources\static" />
+      <recent name="C:\Users\razva\OneDrive\Desktop\Proiect final\ProiectFinal\src\main\resources\templates" />
       <recent name="C:\Users\razva\OneDrive\Desktop\Proiect final\ProiectFinal\src\main\resources\static\css" />
       <recent name="C:\Users\razva\OneDrive\Desktop\Proiect final\ProiectFinal\src\main\resources\static\js" />
       <recent name="C:\Users\razva\OneDrive\Desktop\MovieWebPage\ProiectFinal\src\main\resources\static\images" />
@@ -171,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696695717609</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="login">
+      <option name="closed" value="true" />
+      <created>1696797369410</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696797369410</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +201,8 @@
     <MESSAGE value="index.html customization pt3" />
     <MESSAGE value="many-to-many relationship" />
     <MESSAGE value="register" />
-    <option name="LAST_COMMIT_MESSAGE" value="register" />
+    <MESSAGE value="login" />
+    <option name="LAST_COMMIT_MESSAGE" value="login" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
