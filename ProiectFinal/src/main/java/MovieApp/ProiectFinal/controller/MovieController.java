@@ -3,6 +3,7 @@ package MovieApp.ProiectFinal.controller;
 import MovieApp.ProiectFinal.dto.MovieWithGenresDTO;
 import MovieApp.ProiectFinal.model.Movie;
 import MovieApp.ProiectFinal.service.MovieService;
+import org.springframework.ui.Model;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +26,18 @@ public class MovieController {
     public ResponseEntity<?> saveMovie(@RequestBody Movie movie) {
         return movieService.saveMovie(movie);
     }
+    @GetMapping("/{movieId}")
+    public String showMovieDescription(@PathVariable Long movieId, Model model){
+        List<MovieWithGenresDTO> movie = movieService.findById(movieId);
+            model.addAttribute("movies", movie);
+            return "movie.html";
+    }
 
-    @GetMapping("/show")
-    @ResponseBody
-    public List<MovieWithGenresDTO> showAllMovies() {
-        return movieService.findAll();
+    @GetMapping()
+    public String showAllMovies(Model model) {
+        List<MovieWithGenresDTO> movies = movieService.findAll();
+        model.addAttribute("movies", movies);
+        return "movies.html";
     }
 
     @GetMapping("/findById/{movieId}")

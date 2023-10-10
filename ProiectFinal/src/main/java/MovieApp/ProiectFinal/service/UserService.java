@@ -13,19 +13,25 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 @RequiredArgsConstructor
 
-public class UserService implements UserDetailsService{
+public class UserService implements UserDetailsService {
     @Autowired
     private final UserRepository userRepository;
     @Autowired
     private final PasswordEncoder passwordEncoder;
+    private final Logger logger = Logger.getLogger(UserService.class.getName());
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username)
+        logger.info("Attempting to load user by username: " + username);
+        UserDetails userDetails = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User was not found"));
+        logger.info("User loaded successfully: " + userDetails.getUsername());
+        return userDetails;
     }
 
     public User registerUser(User user) {
@@ -37,6 +43,7 @@ public class UserService implements UserDetailsService{
         user.setRole(UserRoles.USER);
         return userRepository.save(user);
     }
+
     public List<User> findAll() {
         return userRepository.findAll();
     }
@@ -52,12 +59,12 @@ public class UserService implements UserDetailsService{
     }
 
 
-    public Boolean verifyUser(User user){
+    public Boolean verifyUser(User user) {
         User databaseUser = userRepository.findByUsername(user.getUsername()).orElse(null);
-        if (databaseUser != null){
+        if (databaseUser != null) {
             passwordEncoder.matches(user.getPassword(), databaseUser.getPassword());
             return true;
-        }else{
+        } else {
             return false;
         }
     }

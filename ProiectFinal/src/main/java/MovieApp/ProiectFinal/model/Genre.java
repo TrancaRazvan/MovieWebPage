@@ -31,6 +31,14 @@ public class Genre {
     private Set<Series> serieses = new HashSet<>();
 
     @Override
+    public String toString() {
+        return "Genre{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(id, title);
     }

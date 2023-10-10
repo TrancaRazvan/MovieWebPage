@@ -27,6 +27,7 @@ public class Series {
     private int releaseYear;
     private double rating;
     private String imageurl;
+    private String creator;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JsonIgnore
@@ -36,6 +37,14 @@ public class Series {
     private Set<Genre> seriesGenres = new HashSet<>();
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, description, releaseYear, rating, imageurl);
+        return Objects.hash(id, title, description, releaseYear, rating, imageurl,creator);
+    }
+
+    @Override
+    public String toString() {
+        return "Series{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                '}';
     }
 }

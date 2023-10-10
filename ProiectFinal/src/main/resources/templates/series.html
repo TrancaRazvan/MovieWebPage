@@ -6,41 +6,38 @@
     <link th:href="@{/index.css}" rel="stylesheet" type="text/css" >
 
     <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
-    <title>MovieApp</title>
-<style>
-    body {
-    background-color: rgb(32, 35, 37);
-    color: rgb(200, 195, 188);
-}
-</style>
+    <title>Movie Details</title>
+    <style>
+        body {
+            background-color: rgb(32, 35, 37);
+            color: rgb(200, 195, 188);
+        }
+    </style>
 </head>
 <body>
 <header class="main-header">
-
     <div class="menu">
         <a href="/" class="logo">
-        <span class="logo-mini">
-           <i class="fa-solid fa-film fa-lg" style="color: #ff0000;" id="movieIcon">
-               MovieApp
-           </i>
-        </span>
+            <span class="logo-mini">
+                <i class="fa-solid fa-film fa-lg" style="color: #ff0000;" id="movieIcon">
+                    MovieApp
+                </i>
+            </span>
         </a>
         <ul>
             <li>
                 <a title="Home" href="/" aria-current="page">Home</a>
             </li>
-
             <li>
                 <a title="Series" href="/series">Series</a>
             </li>
-
             <li>
                 <a title="Movies" href="/movie">Movies</a>
             </li>
             <li>
                 <div class="search-container" style="width: 1100px;">
                     <input type="text" class="search-input" placeholder="Search..." >
-                    <button class="search-button"  >Search</button>
+                    <button class="search-button">Search</button>
                 </div>
             </li>
             <li class="login-register">
@@ -53,36 +50,27 @@
                     </li>
                 </div>
             </li>
-
         </ul>
     </div>
-
 </header>
-<h1>Popular Movies:</h1>
-<div class="movie-container">
-    <div th:each="movie : ${movies}" class="movie-box">
-        <a th:href="@{/movie/{movieId}(movieId=${movie.id})}">
-            <div class="movie-content">
-            <img class="movie-images" th:src="@{'/images/' + ${movie.imageurl}}" alt="Movie Photo">
-            <h2 class="movie-title" th:text="${movie.title}">Movie Title</h2>
-            </div>
-        </a>
-    </div>
+<div class="series-details" th:each="series : ${serieses}">
+    <h1 th:text="${series.title}">Series Title</h1>
+    <img class="series-image" th:src="@{'/images/' + ${series.imageurl}}" alt="Series Photo">
+    <p class="series-description" th:text="${series.description}">
+        Series description
+    </p>
+    <p class="series-creator" th:text="${series.creator}">
+        Director: John Doe
+    </p>
+    <p class="series-release" th:text="${series.releaseYear}">
+        ReleaseYear
+    </p>
+    <p class="series-rating" th:text="${series.rating}">
+        Rating
+    </p>
+    <p class="series-genre" th:text="${series.seriesGenres}">
+        Genre: Action, Drama
+    </p>
 </div>
-<h1>Popular Series:</h1>
-<div class="movie-container">
-    <div th:each="series : ${serieses}" class="movie-box">
-        <a  th:href="@{/series/{seriesId}(seriesId=${series.id})}">
-            <div class="movie-content">
-            <img class="movie-images" th:src="@{'/images/' + ${series.imageurl}}" alt="Series Photo">
-            <h2 class="movie-title" th:text="${series.title}">Series Title</h2>
-            </div>
-        </a>
-    </div>
-</div>
-
 </body>
-
-
 </html>
-

@@ -28,6 +28,7 @@ public class Movie {
     private int releaseYear;
     private double rating;
     private String imageurl;
+    private String creator;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JsonIgnore
@@ -37,7 +38,7 @@ public class Movie {
     private Set<Genre> movieGenres = new HashSet<>();
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, description, releaseYear, rating, imageurl);
+        return Objects.hash(id, title, description, releaseYear, rating, imageurl, creator);
     }
 
 }

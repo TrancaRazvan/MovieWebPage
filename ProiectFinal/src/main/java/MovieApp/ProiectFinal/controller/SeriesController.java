@@ -1,5 +1,6 @@
 package MovieApp.ProiectFinal.controller;
 
+import MovieApp.ProiectFinal.dto.MovieWithGenresDTO;
 import MovieApp.ProiectFinal.dto.SeriesWithGenresDTO;
 import MovieApp.ProiectFinal.model.Series;
 import MovieApp.ProiectFinal.service.GenreService;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,6 +35,18 @@ public class SeriesController {
     @ResponseBody
     public List<SeriesWithGenresDTO> showAllSeries() {
         return seriesService.findAll();
+    }
+    @GetMapping("/{seriesId}")
+    public String showMovieDescription(@PathVariable Long seriesId, Model model){
+        List<SeriesWithGenresDTO> series = seriesService.findById(seriesId);
+        model.addAttribute("serieses", series);
+        return "series.html";
+    }
+    @GetMapping()
+    public String showAllSeries(Model model) {
+        List<SeriesWithGenresDTO> series = seriesService.findAll();
+        model.addAttribute("serieses", series);
+        return "serieses.html";
     }
 
     @GetMapping("/findById/{seriesId}")

@@ -76,6 +76,7 @@ public class MovieService {
         movieWithGenresDTO.setRating(movie.getRating());
         movieWithGenresDTO.setReleaseYear(movie.getReleaseYear());
         movieWithGenresDTO.setMovieGenres(movie.getMovieGenres());
+        movieWithGenresDTO.setCreator(movie.getCreator());
         return movieWithGenresDTO;
     }
 }

@@ -2,20 +2,14 @@ package MovieApp.ProiectFinal.controller;
 
 
 import MovieApp.ProiectFinal.model.User;
+import MovieApp.ProiectFinal.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import MovieApp.ProiectFinal.service.UserService;
-
 
 import java.util.List;
 
@@ -52,12 +46,6 @@ public class UserController {
         model.addAttribute("user", new User());
         return "register.html";
     }
-
-    @GetMapping("/fail")
-    public String fail(){
-        return "fail.html";
-    }
-
     @PostMapping("/register")
     public String register(@ModelAttribute("user") User user){
         userService.registerUser(user);

@@ -86,6 +86,13 @@
             color: #333333
         }
 
+        .movie-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         .movie-container {
             display: flex;
             flex-wrap: wrap;
@@ -110,9 +117,10 @@
         }
 
         .movie-title {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
-            color: #ffffff;
+            color: #f5f5f5;
+            margin-top: 10px;
         }
 
         .movie-description {
@@ -121,16 +129,11 @@
         }
 
         .movie-images {
+            max-width: 100%;
             width: 100%;
             height: 300px;
             border-radius: 20px;
         }
-
-        .movie-title {
-            font-size: 14px;
-            color: #f5f5f5;
-        }
-
 
         .search-container {
             display: flex;

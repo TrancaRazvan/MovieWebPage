@@ -14,5 +14,6 @@ public class SeriesWithGenresDTO {
     private int releaseYear;
     private double rating;
     private String imageurl;
+    private String creator;
     private Set<Genre> seriesGenres = new HashSet<>();
 }

@@ -76,6 +76,7 @@ public class SeriesService {
         seriesWithGenresDTO.setRating(series.getRating());
         seriesWithGenresDTO.setReleaseYear(series.getReleaseYear());
         seriesWithGenresDTO.setSeriesGenres(series.getSeriesGenres());
+        seriesWithGenresDTO.setCreator(series.getCreator());
         return seriesWithGenresDTO;
     }
 

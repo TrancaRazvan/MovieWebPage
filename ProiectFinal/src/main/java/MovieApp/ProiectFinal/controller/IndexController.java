@@ -9,9 +9,12 @@ import MovieApp.ProiectFinal.service.SeriesService;
 import MovieApp.ProiectFinal.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -26,6 +29,7 @@ public class IndexController {
     @Autowired
     private final UserService userService;
 
+
     @GetMapping("/")
     public String showIndexPage(Model model) {
 
@@ -36,6 +40,11 @@ public class IndexController {
         model.addAttribute("serieses", serieses);
 
         return "index.html";
+    }
+
+    @RequestMapping(value = "/error", method = RequestMethod.GET)
+    public String handleError() {
+        return "error";
     }
 
 }

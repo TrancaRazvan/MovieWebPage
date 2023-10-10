@@ -14,5 +14,6 @@ public class MovieWithGenresDTO {
     private int releaseYear;
     private double rating;
     private String imageurl;
+    private String creator;
     private Set<Genre> movieGenres = new HashSet<>();
 }
