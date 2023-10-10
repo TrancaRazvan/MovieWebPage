@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link th:href="@{/index.css}" rel="stylesheet" type="text/css" >
+    <link th:href="@{/index.css}" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
     <title>Movie Details</title>
@@ -36,14 +36,14 @@
             </li>
             <li>
                 <div class="search-container" style="width: 1100px;">
-                    <input type="text" class="search-input" placeholder="Search..." >
+                    <input type="text" class="search-input" placeholder="Search...">
                     <button class="search-button">Search</button>
                 </div>
             </li>
             <li class="login-register">
                 <div>
                     <li>
-                        <a title="LogIn" href="/login" >Log In</a>
+                        <a title="LogIn" href="/login">Log In</a>
                     </li>
                     <li>
                         <a title="Register" href="/register">Register</a>
@@ -53,6 +53,8 @@
         </ul>
     </div>
 </header>
+
+
 <div class="movie-details" th:each="movie : ${movies}">
     <h1 th:text="${movie.title}">Movie Title</h1>
     <img class="movie-image" th:src="@{'/images/' + ${movie.imageurl}}" alt="Movie Photo">

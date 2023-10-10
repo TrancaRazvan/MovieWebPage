@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -29,7 +31,19 @@ public class MovieService {
         return movieRepository.findAll().stream().map(this::convertEntityToDto)
                 .collect(Collectors.toList());
     }
-
+   public List<MovieWithGenresDTO> findAllMoviesWithGenre(String genre){
+        List<Movie> moviesWithGenre = new ArrayList<>();
+        List<Movie> movies = movieRepository.findAll();
+        for (Movie movie: movies){
+            Set<Genre> genres = movie.getMovieGenres();
+            for (Genre movieGenre : genres){
+                if (movieGenre.toString().equalsIgnoreCase(genre)){
+                    moviesWithGenre.add(movie);
+                }
+            }
+        }
+        return moviesWithGenre.stream().map(this::convertEntityToDto).collect(Collectors.toList());
+   }
     public ResponseEntity<?> saveMovie(Movie movie) {
         if (movie != null) {
             movieRepository.save(movie);

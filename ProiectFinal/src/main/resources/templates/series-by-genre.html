@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/index.css}" rel="stylesheet" type="text/css">
-
     <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
-    <title>MovieApp - Series</title>
+    <title>MovieApp - All Movies</title>
     <style>
         body {
             background-color: rgb(32, 35, 37);
@@ -53,10 +52,10 @@
         </ul>
     </div>
 </header>
-<h1>All Series:</h1>
+<h1>All Series</h1>
 <div class="movie-container">
     <div th:each="series : ${serieses}" class="movie-box">
-        <a th:href="@{/series/{seriesId}(seriesId=${series.id})}">
+        <a th:href="@{/series/{seriesId}/{seriesTitle}(seriesId=${series.id}, seriesTitle=${series.title})}">
             <div class="movie-content">
                 <img class="movie-images" th:src="@{'/images/' + ${series.imageurl}}" alt="Series Photo">
                 <h2 class="movie-title" th:text="${series.title}">Series Title</h2>

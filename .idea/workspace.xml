@@ -4,32 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="css files">
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movie.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movies.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/series.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/serieses.html" afterDir="false" />
+    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="all pages">
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/delete-movie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/delete-series.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movies-by-genre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/series-by-genre.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/SeriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/SeriesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/MovieWithGenresDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/MovieWithGenresDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/SeriesWithGenresDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/SeriesWithGenresDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Series.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/SeriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/SeriesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/MovieService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/SeriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/SeriesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movies.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/moviespage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/serieses.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/seriespage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696872441769</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="all pages">
+      <option name="closed" value="true" />
+      <created>1696929922147</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696929922147</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +231,8 @@
     <MESSAGE value="register" />
     <MESSAGE value="login" />
     <MESSAGE value="css files" />
-    <option name="LAST_COMMIT_MESSAGE" value="css files" />
+    <MESSAGE value="all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="all pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

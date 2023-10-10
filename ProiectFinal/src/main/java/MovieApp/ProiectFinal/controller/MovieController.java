@@ -2,6 +2,7 @@ package MovieApp.ProiectFinal.controller;
 
 import MovieApp.ProiectFinal.dto.MovieWithGenresDTO;
 import MovieApp.ProiectFinal.model.Movie;
+import MovieApp.ProiectFinal.repository.MovieRepository;
 import MovieApp.ProiectFinal.service.MovieService;
 import org.springframework.ui.Model;
 import jakarta.transaction.Transactional;
@@ -21,41 +22,54 @@ public class MovieController {
 
     @Autowired
     private final MovieService movieService;
+    @Autowired
+    private final MovieRepository movieRepository;
 
     @PostMapping("/addMovie")
     public ResponseEntity<?> saveMovie(@RequestBody Movie movie) {
         return movieService.saveMovie(movie);
     }
-    @GetMapping("/{movieId}")
-    public String showMovieDescription(@PathVariable Long movieId, Model model){
+
+    @GetMapping("/{movieId}/{movieTitle}")
+    public String showMovieDescription(@PathVariable Long movieId,@PathVariable String movieTitle, Model model) {
         List<MovieWithGenresDTO> movie = movieService.findById(movieId);
-            model.addAttribute("movies", movie);
-            return "movie.html";
+        model.addAttribute("movies", movie);
+        return "movie.html";
     }
 
-    @GetMapping()
+    @GetMapping
     public String showAllMovies(Model model) {
         List<MovieWithGenresDTO> movies = movieService.findAll();
         model.addAttribute("movies", movies);
-        return "movies.html";
+        return "moviespage.html";
     }
+
+    @GetMapping("/{genre}")
+    public String filterMovieByGenre(@PathVariable String genre, Model model) {
+       List<MovieWithGenresDTO> movies = movieService.findAllMoviesWithGenre(genre);
+       model.addAttribute("movies", movies);
+       return "movies-by-genre.html";
+    }
+
 
     @GetMapping("/findById/{movieId}")
     @ResponseBody
     public List<MovieWithGenresDTO> findMovieById(@PathVariable Long movieId) {
         return movieService.findById(movieId);
     }
+
     @PostMapping("/save/{movieId}/{genreId}")
     @Transactional
-    public ResponseEntity<?> saveGenreToSeries(@PathVariable Long movieId, @PathVariable Long genreId) {
+    public ResponseEntity<?> saveGenreToMovie(@PathVariable Long movieId, @PathVariable Long genreId) {
         return movieService.addGenreToMovie(movieId, genreId);
     }
-    @DeleteMapping("/delete/{movieId}")
-    public ResponseEntity<?> deleteMovieById(@PathVariable Long movieId){
+
+    @PostMapping("/delete")
+    public ResponseEntity<?> deleteMovieById(@RequestParam Long movieId) {
         boolean deleted = movieService.deleteById(movieId);
-        if (deleted){
+        if (deleted) {
             return ResponseEntity.ok("Movie successfully deleted");
-        }else{
+        } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }

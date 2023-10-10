@@ -52,10 +52,10 @@
         </ul>
     </div>
 </header>
-<h1>All Movies:</h1>
+<h1>All Movies</h1>
 <div class="movie-container">
     <div th:each="movie : ${movies}" class="movie-box">
-        <a th:href="@{/movie/{movieId}(movieId=${movie.id})}">
+        <a th:href="@{/movie/{movieId}/{movieTitle}(movieId=${movie.id}, movieTitle=${movie.title})}">
             <div class="movie-content">
                 <img class="movie-images" th:src="@{'/images/' + ${movie.imageurl}}" alt="Movie Photo">
                 <h2 class="movie-title" th:text="${movie.title}">Movie Title</h2>

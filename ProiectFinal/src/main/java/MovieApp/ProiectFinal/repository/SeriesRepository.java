@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 
 public interface SeriesRepository extends JpaRepository<Series, Long> {
-    List<Series> findByTitleContaining(String name);
+    List<Series> findByTitle(String title);
 }

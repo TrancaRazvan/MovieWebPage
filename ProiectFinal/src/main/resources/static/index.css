@@ -85,6 +85,71 @@
             padding: 0;
             color: #333333
         }
+        .genres-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .genres-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .genres-list li {
+            margin: 0 10px;
+        }
+
+        .genres-list a {
+            text-decoration: none;
+            background-color: #dc143c;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .genres-list a:hover {
+            background-color: #ff0000;
+        }
+/* Style for the delete buttons */
+.delete-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.delete-button form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-button input[type="number"] {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #151b1f;
+    color: #ffffff;
+}
+
+.delete-button button {
+    background-color: #dc143c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-button button:hover {
+    background-color: #ff0000;
+}
+
 
         .movie-content {
             display: flex;

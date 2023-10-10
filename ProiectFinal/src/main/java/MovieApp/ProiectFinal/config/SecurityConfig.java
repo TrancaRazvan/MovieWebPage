@@ -23,8 +23,10 @@ public class SecurityConfig {
         http
 
                 .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers("/movie/delete","/series/delete").hasRole("ADMIN")
                         .requestMatchers("/login", "/register", "/static/**").permitAll()
                         .anyRequest().authenticated()
+
                 )
                 .formLogin((form) -> form
                         .loginPage("/login")

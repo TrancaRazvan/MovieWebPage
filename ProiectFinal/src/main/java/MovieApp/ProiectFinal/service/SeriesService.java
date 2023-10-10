@@ -2,6 +2,7 @@ package MovieApp.ProiectFinal.service;
 
 import MovieApp.ProiectFinal.dto.SeriesWithGenresDTO;
 import MovieApp.ProiectFinal.model.Genre;
+import MovieApp.ProiectFinal.model.Movie;
 import MovieApp.ProiectFinal.model.Series;
 import MovieApp.ProiectFinal.repository.GenreRepository;
 import MovieApp.ProiectFinal.repository.SeriesRepository;
@@ -12,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -28,6 +30,10 @@ public class SeriesService {
     public List<SeriesWithGenresDTO> findAll() {
         return seriesRepository.findAll().stream().map(this::convertEntityToDto)
                 .collect(Collectors.toList());
+    }
+
+    public List<SeriesWithGenresDTO> findByTitle(String title) {
+        return seriesRepository.findByTitle(title).stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     public ResponseEntity<?> saveSeries(Series series) {
@@ -80,4 +86,17 @@ public class SeriesService {
         return seriesWithGenresDTO;
     }
 
+    public List<SeriesWithGenresDTO> findAllSeriesWithGenre(String genre) {
+        List<Series> seriesWithGenre = new ArrayList<>();
+        List<Series> serieses = seriesRepository.findAll();
+        for (Series series: serieses){
+            Set<Genre> genres = series.getSeriesGenres();
+            for (Genre seriesGenre : genres){
+                if (seriesGenre.toString().equalsIgnoreCase(genre)){
+                    seriesWithGenre.add(series);
+                }
+            }
+        }
+        return seriesWithGenre.stream().map(this::convertEntityToDto).collect(Collectors.toList());
+    }
 }
