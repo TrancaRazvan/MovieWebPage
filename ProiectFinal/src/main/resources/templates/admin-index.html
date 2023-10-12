@@ -242,7 +242,7 @@
     <h2>Genres</h2>
     <div class="delete-button">
         <a class="admin-button" href="/genre/show">Show All Genres</a>
-        <form th:action="@{/movie/delete}" method="post">
+        <form th:action="@{/genre/delete}" method="post">
             <button type="submit">Delete Genre</button>
             <input type="number" name="genreId" placeholder="Genre ID">
         </form>

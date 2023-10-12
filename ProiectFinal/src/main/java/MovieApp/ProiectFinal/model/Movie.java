@@ -17,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Movie implements Media {
+public class Movie{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,13 +43,4 @@ public class Movie implements Media {
         return Objects.hash(id, title, description, releaseYear, rating, imageurl, creator, trailer);
     }
 
-    @Override
-    public String getImageurl() {
-        return imageurl;
-    }
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
 }

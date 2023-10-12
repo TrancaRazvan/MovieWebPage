@@ -20,12 +20,12 @@ public class GenreController {
     private final GenreService genreService;
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveGenre(@RequestParam String text) {
+    public String saveGenre(@RequestParam String text) {
         boolean saved = genreService.saveGenre(text);
         if (saved){
-            return ResponseEntity.ok("Genre successfully added");
+            return "redirect:/genre/show";
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+            return "error.html";
         }
     }
 

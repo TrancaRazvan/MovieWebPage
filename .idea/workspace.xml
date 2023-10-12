@@ -4,68 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="10/10/2023">
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/AdminAuthHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Media.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/12AngryMen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/BluePlanetII.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Chernobyl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Cosmos.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/FightClub.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/ForrestGump.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/GameofThrones.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Goodfellas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Inception.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Interstellar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Oppenheimer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/RickandMorty.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Schindler'sList.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Se7en.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/Spider-ManAcrosstheSpider-Verse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/StarWarEpisodeV-TheEmpireStrikesBack.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheDarkKnight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheGodfatherPartII.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheLordoftheRingsTheReturnoftheKing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheMatrix.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheSopranos.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/TheWire.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/add-movie.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/add-series.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/admin-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/all-genres.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/all-users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/home.html" afterDir="false" />
+    <list default="true" id="08a73d24-95de-48c1-b39d-3682e927229f" name="Changes" comment="10/12/2023">
+      <change afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/images/WALLE.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/GenreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/SeriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/SeriesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/MovieWithGenresDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/MovieWithGenresDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/SeriesWithGenresDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/dto/SeriesWithGenresDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Media.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/Series.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/model/UserRoles.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/GenreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/GenreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/SeriesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/repository/SeriesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/GenreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/GenreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/SeriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/SeriesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/java/MovieApp/ProiectFinal/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/css/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/admin-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/admin-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movies-by-genre.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/movies-by-genre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/moviespage.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/moviespage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/series-by-genre.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/series-by-genre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/series.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/series.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/seriespage.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectFinal/src/main/resources/templates/seriespage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,18 +46,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/razva/OneDrive/Desktop/Proiect final/ProiectFinal/src/main/resources/templates/genres",
-    "settings.editor.selected.configurable": "preferences.externalTools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/razva/OneDrive/Desktop/ddroidd&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="MovieApp.ProiectFinal.model" />
@@ -257,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696953591411</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="10/12/2023">
+      <option name="closed" value="true" />
+      <created>1697073988617</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697073988617</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +242,8 @@
     <MESSAGE value="css files" />
     <MESSAGE value="all pages" />
     <MESSAGE value="10/10/2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="10/10/2023" />
+    <MESSAGE value="10/12/2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="10/12/2023" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

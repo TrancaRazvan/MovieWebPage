@@ -16,7 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Series implements Media{
+public class Series{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -48,13 +48,5 @@ public class Series implements Media{
                 ", title='" + title + '\'' +
                 '}';
     }
-    @Override
-    public String getImageurl() {
-        return imageurl;
-    }
 
-    @Override
-    public String getTitle() {
-        return title;
-    }
 }
