@@ -11,6 +11,7 @@ public class SeriesWithGenresDTO {
     private Long id;
     private String title;
     private String description;
+    private String trailer;
     private int releaseYear;
     private double rating;
     private String imageurl;

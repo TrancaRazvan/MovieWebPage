@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,17 +20,29 @@ public class GenreController {
     private final GenreService genreService;
 
     @PostMapping("/save")
-    public ResponseEntity<Genre> saveGenre(@RequestBody Genre genre){
-        Genre savedGenre = genreService.saveGenre(genre);
-        if(savedGenre != null){
-            return new ResponseEntity<Genre>(savedGenre, HttpStatus.CREATED);
-        }else{
-            return new ResponseEntity<Genre>(HttpStatus.BAD_REQUEST);
+    public ResponseEntity<?> saveGenre(@RequestParam String text) {
+        boolean saved = genreService.saveGenre(text);
+        if (saved){
+            return ResponseEntity.ok("Genre successfully added");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
+
     @GetMapping("/show")
-    @ResponseBody
-    public List<Genre> showAllGenres(){
-        return genreService.findAll();
+    public String showAllGenres(Model model) {
+        List<Genre> genres = genreService.findAll();
+        model.addAttribute("genres", genres);
+        return "all-genres.html";
+    }
+
+    @PostMapping("/delete")
+    public ResponseEntity<?> deleteSeriesById(@RequestParam Long genreId) {
+        boolean deleted = genreService.deleteById(genreId);
+        if (deleted) {
+            return ResponseEntity.ok("Genre successfully deleted");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 }

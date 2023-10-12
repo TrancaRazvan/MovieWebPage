@@ -26,8 +26,14 @@ public class MovieController {
     private final MovieRepository movieRepository;
 
     @PostMapping("/addMovie")
-    public ResponseEntity<?> saveMovie(@RequestBody Movie movie) {
-        return movieService.saveMovie(movie);
+    public String  saveMovie(@ModelAttribute("movie") Movie movie) {
+         movieService.saveMovie(movie);
+         return "redirect:/admin";
+    }
+    @GetMapping("/addMovie")
+    public String showAddMovieForm(Model model) {
+        model.addAttribute("movie", new Movie());
+        return "add-movie.html";
     }
 
     @GetMapping("/{movieId}/{movieTitle}")

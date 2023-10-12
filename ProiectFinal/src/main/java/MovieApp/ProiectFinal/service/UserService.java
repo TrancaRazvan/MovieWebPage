@@ -2,7 +2,6 @@ package MovieApp.ProiectFinal.service;
 
 
 import MovieApp.ProiectFinal.model.User;
-import MovieApp.ProiectFinal.model.UserRoles;
 import MovieApp.ProiectFinal.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +39,7 @@ public class UserService implements UserDetailsService {
         }
         String encodedPass = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPass);
-        user.setRole(UserRoles.USER);
+        user.setRole("USER");
         return userRepository.save(user);
     }
 
@@ -52,10 +51,12 @@ public class UserService implements UserDetailsService {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Guest not found"));
     }
 
-    public void deleteUserById(Long id) {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        userRepository.deleteById(id);
+    public boolean deleteUserById(Long id) {
+        if (userRepository.findById(id).isPresent()) {
+            userRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 
@@ -68,4 +69,6 @@ public class UserService implements UserDetailsService {
             return false;
         }
     }
+
+
 }

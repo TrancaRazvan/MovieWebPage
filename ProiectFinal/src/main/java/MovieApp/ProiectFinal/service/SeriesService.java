@@ -83,6 +83,7 @@ public class SeriesService {
         seriesWithGenresDTO.setReleaseYear(series.getReleaseYear());
         seriesWithGenresDTO.setSeriesGenres(series.getSeriesGenres());
         seriesWithGenresDTO.setCreator(series.getCreator());
+        seriesWithGenresDTO.setTrailer(series.getTrailer());
         return seriesWithGenresDTO;
     }
 
@@ -98,5 +99,9 @@ public class SeriesService {
             }
         }
         return seriesWithGenre.stream().map(this::convertEntityToDto).collect(Collectors.toList());
+    }
+
+    public List<Series> searchSeriesByTitle(String query) {
+        return seriesRepository.findByTitle(query);
     }
 }

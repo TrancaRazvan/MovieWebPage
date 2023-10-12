@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
     <title>MovieApp</title>
     <style>
@@ -18,7 +18,7 @@
 <header class="main-header">
 
     <div class="menu">
-        <a href="/" class="logo">
+        <a href="/home" class="logo">
         <span class="logo-mini">
            <i class="fa-solid fa-film fa-lg" style="color: #ff0000;" id="movieIcon">
                MovieApp
@@ -27,26 +27,27 @@
         </a>
         <ul>
             <li>
-                <a title="Home" href="/" aria-current="page">Home</a>
+                <a title="Home" href="/home" aria-current="page">Home</a>
             </li>
 
             <li>
-                <a title="Series" href="/login">Series</a>
+                <a title="Series" href="/series">Series</a>
             </li>
 
             <li>
-                <a title="Movies" href="/login">Movies</a>
+                <a title="Movies" href="/movie">Movies</a>
             </li>
 
-            <li class="login-register">
+            <li class="login-register-user">
                 <div class="login">
-                    <a title="Log In" href="/login">Log In</a>
+                    <a>
+                        Hello, <span th:text="${#authentication.name}"></span>
+                    </a>
                 </div>
                 <div class="register">
-                    <a title="Register" href="/register">Register</a>
+                        <a title="Log Out" href="/logout">Log Out</a>
                 </div>
             </li>
-
 
         </ul>
     </div>
@@ -74,8 +75,7 @@
         </a>
     </div>
 </div>
+
 </body>
-
-
 </html>
 

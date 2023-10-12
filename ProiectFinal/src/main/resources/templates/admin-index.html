@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
+    <title>MovieApp</title>
+        <style>
+    body {
+        background-color: rgb(32, 35, 37);
+        color: rgb(200, 195, 188);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-header {
+        background-color: #1a2226;
+        height: 80px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: #ff0000;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo i {
+        margin-right: 10px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100%;
+    }
+
+    li {
+        margin-right: 35px;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 0.99em;
+        font-weight: bold;
+    }
+
+    li:first-child {
+        margin-left: 20px;
+    }
+
+    li:last-child {
+        margin-left: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        background-color: #151b1f;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .search-input {
+        border: 2px solid #1a2226;
+        outline: none;
+        flex-grow: 1;
+        padding: 10px;
+        font-size: 16px;
+        background: #151b1f;
+        color: #ffffff;
+    }
+
+    .search-button {
+        background-color: #dc143c;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .search-button:hover {
+        background-color: #ff0000;
+    }
+
+    .admin-section {
+        background-color: #1a2226;
+        color: #ffffff;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .admin-button {
+        text-decoration: none;
+        background-color: #dc143c;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .admin-button:hover {
+        background-color: #ff0000;
+    }
+
+    .delete-button {
+        display: inline-block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .delete-button form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delete-button input[type="number"] {
+        width: 150px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        background-color: #151b1f;
+        color: #ffffff;
+    }
+
+    .delete-button button {
+        background-color: #dc143c;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .delete-button button:hover {
+        background-color: #ff0000;
+    }
+    </style>
+
+</head>
+<body>
+<header class="main-header">
+    <div class="menu">
+        <a href="/home" class="logo">
+            <span class="logo-mini">
+                <i class="fa-solid fa-film fa-lg" style="color: #ff0000;" id="movieIcon">MovieApp</i>
+            </span>
+        </a>
+        <ul>
+            <li>
+                <a title="Home" href="/home" aria-current="page">Home</a>
+            </li>
+            <li>
+                <a title="Series" href="/series">Series</a>
+            </li>
+            <li>
+                <a title="Movies" href="/movie">Movies</a>
+            </li>
+            <li class="login-register-user">
+                <div class="login">
+                    <a>
+                        Hello, <span th:text="${#authentication.name}"></span>
+                    </a>
+                </div>
+                <div class="register">
+                    <a title="Log Out" href="/logout">Log Out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="admin-section">
+    <h2>Users</h2>
+    <div class="delete-button">
+        <a class="admin-button" href="/allUsers">Show All Users</a>
+        <form th:action="@{/users/delete}" method="post">
+            <button type="submit">Delete User</button>
+            <input type="number" name="userId" placeholder="User ID">
+        </form>
+    </div>
+</section>
+
+<section class="admin-section">
+    <h2>Movies</h2>
+    <div class="delete-button">
+        <a class="admin-button" href="/movie">Show All Movies</a>
+        <form th:action="@{/movie/delete}" method="post" >
+            <button type="submit">Delete Movie</button>
+            <input type="number" name="movieId" placeholder="Movie ID">
+        </form>
+        <a class="admin-button" href="/movie/addMovie">Add movie</a>
+    </div>
+
+</section>
+
+<section class="admin-section">
+    <h2>Series</h2>
+    <div class="delete-button">
+        <a class="admin-button" href="/series">Show All Series</a>
+        <form th:action="@{/series/delete}" method="post">
+            <button type="submit">Delete Series</button>
+            <input type="number" name="seriesId" placeholder="Series ID">
+        </form>
+        <a class="admin-button" href="/series/addSeries">Add Series</a>
+    </div>
+</section>
+
+<section class="admin-section">
+    <h2>Genres</h2>
+    <div class="delete-button">
+        <a class="admin-button" href="/genre/show">Show All Genres</a>
+        <form th:action="@{/movie/delete}" method="post">
+            <button type="submit">Delete Genre</button>
+            <input type="number" name="genreId" placeholder="Genre ID">
+        </form>
+        <form th:action="@{/genre/save}" method="post">
+            <button type="submit">Add Genre</button>
+            <input type="text" name="text" placeholder="Genre name">
+        </form>
+    </div>
+</section>

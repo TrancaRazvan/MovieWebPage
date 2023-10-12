@@ -91,6 +91,11 @@ public class MovieService {
         movieWithGenresDTO.setReleaseYear(movie.getReleaseYear());
         movieWithGenresDTO.setMovieGenres(movie.getMovieGenres());
         movieWithGenresDTO.setCreator(movie.getCreator());
+        movieWithGenresDTO.setTrailer(movie.getTrailer());
         return movieWithGenresDTO;
+    }
+
+    public List<Movie> searchMoviesByTitle(String query) {
+        return movieRepository.findByTitle(query);
     }
 }

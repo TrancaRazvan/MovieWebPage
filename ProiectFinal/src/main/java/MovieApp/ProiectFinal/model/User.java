@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -24,8 +25,7 @@ public class User implements UserDetails{
     private String username;
     private String password;
     private String email;
-    @Enumerated(value = EnumType.STRING)
-    private UserRoles role;
+    private String role;
     @Override
     public String toString() {
         return "User{" +
@@ -38,7 +38,7 @@ public class User implements UserDetails{
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return Collections.singleton(new SimpleGrantedAuthority(role));
     }
 
     @Override
@@ -74,4 +74,5 @@ public class User implements UserDetails{
     public boolean isEnabled() {
         return true;
     }
+
 }

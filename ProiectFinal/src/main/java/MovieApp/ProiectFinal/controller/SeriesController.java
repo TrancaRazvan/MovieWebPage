@@ -2,6 +2,7 @@ package MovieApp.ProiectFinal.controller;
 
 import MovieApp.ProiectFinal.dto.MovieWithGenresDTO;
 import MovieApp.ProiectFinal.dto.SeriesWithGenresDTO;
+import MovieApp.ProiectFinal.model.Movie;
 import MovieApp.ProiectFinal.model.Series;
 import MovieApp.ProiectFinal.repository.SeriesRepository;
 import MovieApp.ProiectFinal.service.GenreService;
@@ -30,8 +31,14 @@ public class SeriesController {
     private final SeriesRepository seriesRepository;
 
     @PostMapping("/addSeries")
-    public ResponseEntity<?> saveSeries(@RequestBody Series series) {
-        return seriesService.saveSeries(series);
+    public String  saveSeries(@ModelAttribute("series") Series series) {
+        seriesService.saveSeries(series);
+        return "redirect:/admin";
+    }
+    @GetMapping("/addSeries")
+    public String showAddSeriesForm(Model model) {
+        model.addAttribute("series", new Movie());
+        return "add-series.html";
     }
 
     @GetMapping("/show")

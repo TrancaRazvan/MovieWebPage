@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link th:href="@{/index.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
 
     <script src="https://kit.fontawesome.com/ad4433a74f.js" crossorigin="anonymous"></script>
     <title>MovieApp - Series</title>
@@ -17,7 +17,7 @@
 <body>
 <header class="main-header">
     <div class="menu">
-        <a href="/" class="logo">
+        <a href="/home" class="logo">
             <span class="logo-mini">
                 <i class="fa-solid fa-film fa-lg" style="color: #ff0000;" id="movieIcon">
                     MovieApp
@@ -26,7 +26,7 @@
         </a>
         <ul>
             <li>
-                <a title="Home" href="/" aria-current="page">Home</a>
+                <a title="Home" href="/home" aria-current="page">Home</a>
             </li>
             <li>
                 <a title="Series" href="/series">Series</a>
@@ -34,20 +34,15 @@
             <li>
                 <a title="Movies" href="/movie">Movies</a>
             </li>
-            <li>
-                <div class="search-container" style="width: 1100px;">
-                    <input type="text" class="search-input" placeholder="Search...">
-                    <button class="search-button">Search</button>
+
+            <li class="login-register-user">
+                <div class="login">
+                    <a>
+                        Hello, <span th:text="${#authentication.name}"></span>
+                    </a>
                 </div>
-            </li>
-            <li class="login-register">
-                <div>
-                    <li>
-                        <a title="LogIn" href="/login">Log In</a>
-                    </li>
-                    <li>
-                        <a title="Register" href="/register">Register</a>
-                    </li>
+                <div class="register">
+                    <a title="Log Out" href="/logout">Log Out</a>
                 </div>
             </li>
         </ul>

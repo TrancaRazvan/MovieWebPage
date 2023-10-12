@@ -1,10 +1,12 @@
 package MovieApp.ProiectFinal.config;
 
-import MovieApp.ProiectFinal.service.UserService;
+import org.springframework.boot.autoconfigure.security.StaticResourceLocation;
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,7 +16,7 @@ import java.util.logging.Logger;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig {
+public class SecurityConfig{
     private final Logger logger = Logger.getLogger(SecurityConfig.class.getName());
 
     @Bean
@@ -23,16 +25,16 @@ public class SecurityConfig {
         http
 
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/movie/delete","/series/delete").hasRole("ADMIN")
-                        .requestMatchers("/login", "/register", "/static/**").permitAll()
+                        .requestMatchers("/login", "/register", "/").permitAll()
+                        .requestMatchers("/resources/static/**", "/static/**").permitAll()
+                        .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+                        .requestMatchers(PathRequest.toStaticResources().at(StaticResourceLocation.CSS)).permitAll()
                         .anyRequest().authenticated()
 
                 )
                 .formLogin((form) -> form
                         .loginPage("/login")
-                        .failureUrl("/login?error=true")
-                        .permitAll()
-                        .defaultSuccessUrl("/", true)
+                        .successHandler(new AdminAuthHandler())
                         .permitAll()
                 )
                 .logout(LogoutConfigurer::permitAll);
@@ -44,6 +46,4 @@ public class SecurityConfig {
     public PasswordEncoder getEncoder() {
         return new BCryptPasswordEncoder();
     }
-
-
 }

@@ -67,17 +67,29 @@
             text-decoration: none;
             color: #fff;
             padding: 5px 10px;
-            margin-right: 5px;
-            margin-left: 5px;
-            background-color: #dc143c;
+            margin-right: -1150px;
+            margin-left: 1160px;
             border-radius: 5px;
         }
+        .login-register-user a {
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 5px 10px;
+                    margin-right: -1140px;
+                    margin-left: 1135px;
+
+                    border-radius: 5px;
+                }
         .login-register {
             display: flex;
             align-items: center;
-            margin-right: 5px;
+            margin-left: auto;
+            justify-content: flex-end;
 }
 
+.login, .register {
+    margin-left: 10px;
+}
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -115,6 +127,7 @@
         }
 /* Style for the delete buttons */
 .delete-button {
+display: inline-block;
     text-align: center;
     margin: 20px 0;
 }

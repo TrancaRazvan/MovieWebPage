@@ -16,7 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Series {
+public class Series implements Media{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,6 +28,7 @@ public class Series {
     private double rating;
     private String imageurl;
     private String creator;
+    private String trailer;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JsonIgnore
@@ -37,7 +38,7 @@ public class Series {
     private Set<Genre> seriesGenres = new HashSet<>();
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, description, releaseYear, rating, imageurl,creator);
+        return Objects.hash(id, title, description, releaseYear, rating, imageurl,creator, trailer);
     }
 
     @Override
@@ -46,5 +47,14 @@ public class Series {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 '}';
+    }
+    @Override
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
     }
 }
