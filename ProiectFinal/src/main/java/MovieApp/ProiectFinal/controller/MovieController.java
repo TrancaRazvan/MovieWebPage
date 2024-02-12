@@ -22,8 +22,6 @@ public class MovieController {
 
     @Autowired
     private final MovieService movieService;
-    @Autowired
-    private final MovieRepository movieRepository;
 
     @PostMapping("/addMovie")
     public String  saveMovie(@ModelAttribute("movie") Movie movie) {

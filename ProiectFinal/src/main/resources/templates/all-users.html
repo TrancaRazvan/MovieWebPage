@@ -1,49 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>All Users</title>
-    <style>
-        body {
-        background-color: rgb(32, 35, 37);
-    }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            border-spacing: 0;
-            background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #fff;
-        }
-
-        th, td {
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
+    <link th:href="@{/css/allUsers.css}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>All Users</h1>
